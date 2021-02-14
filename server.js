@@ -15,8 +15,11 @@ app.use(express.static("./public"));
 
 // routes
 const indexRoutes = require("./routes/index");
+const postRoutes = require("./routes/post");
 
 // routes use
 app.use("/", indexRoutes)
+
+app.use("/post", postRoutes)
 
 app.listen(PORT, () => console.log(`App is listening to PORT ${PORT}`))
